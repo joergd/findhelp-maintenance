@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "normalize";
+
+
+body { background-color: #fff; color: #3e3f40; text-align: center; font-family: arial, sans-serif; }
+
+div.dialog {
+  width: 25em;
+  padding: 0 4em;
+  margin: 0 auto 0 auto;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-size: 24px;
+  color: #4c4d4e;
+  line-height: 1.5em;
+}
