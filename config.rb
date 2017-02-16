@@ -42,9 +42,10 @@ end
 activate :deploy do |deploy|
   deploy.deploy_method = :sftp
   deploy.user = "root"
-  deploy.host = "104.131.65.244"
+  deploy.host = "138.197.117.137"
   deploy.path = "/var/www/html"
   deploy.port = 22
+  deploy.clean = true
   # Optional Settings
   # deploy.remote   = 'gh-origin' # remote name or git url, default: origin
   # deploy.branch   = 'master' # default: gh-pages
