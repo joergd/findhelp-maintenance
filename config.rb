@@ -31,18 +31,23 @@ page '/*.txt', layout: false
 
 # Build-specific configuration
 configure :build do
+  activate :asset_hash
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method = :git
+  deploy.deploy_method = :sftp
+  deploy.user = "root"
+  deploy.host = "104.131.65.244"
+  deploy.path = "/var/www/html"
+  deploy.port = 22
   # Optional Settings
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-  # deploy.branch   = 'custom-branch' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.remote   = 'gh-origin' # remote name or git url, default: origin
+  # deploy.branch   = 'master' # default: gh-pages
+   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
