@@ -42,7 +42,7 @@ end
 activate :deploy do |deploy|
   deploy.deploy_method = :sftp
   deploy.user = "root"
-  deploy.host = "188.166.154.90"
+  deploy.host = "46.101.38.125"
   deploy.path = "/var/www/html"
   deploy.port = 22
   deploy.clean = true
